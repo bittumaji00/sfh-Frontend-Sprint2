@@ -1,0 +1,24 @@
+<p>user-page works!</p>
+<div style="text-align: right;">
+<button mat-icon-button  class="example-icon favorite-icon" (click)="getWishlist()" aria-label="Example icon-button with heart icon">
+    
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-raised-button color="accent"  (click)="userLogout()" routerLink="">Logout</button>
+  </div>
+
+
+<div class="container">
+
+  <div class="item" *ngFor ="let product of products" >
+    <img src="assets/images/{{product.url}}"><br>
+    <div style="color:blue; align-self:center">
+    {{product.name}}<br>
+    </div>
+    <div style="color:red;">₹
+    {{product.price}}.00<br>
+    </div>
+        <button style="margin-right:20px"  mat-raised-button colour="primary">Add To cart</button>
+        <button  mat-raised-button colour="primary" (click)="getData(product.id)">Add to Wishlist</button>
+    </div>
+    </div>

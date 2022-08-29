@@ -1,0 +1,29 @@
+
+
+<div class="container" >
+
+  
+    
+        <div style="align-self:center" class="item" *ngFor ="let product of products" >
+            <img src="assets/images/{{product.url}}"><br>
+        <div style="color:blue;">
+        {{product.name}}<br>
+        </div>
+        <div style="color:red;">₹
+        {{product.price}}.00<br>
+        </div>
+            <button style="margin-right:20px"   mat-raised-button colour="primary" (click)="getData()">Add To cart</button>
+        <button  mat-raised-button colour="primary" (click)="getData()">Add to Wishlist</button>
+
+
+       
+
+
+    </div>
+
+
+
+
+   
+    </div>
+

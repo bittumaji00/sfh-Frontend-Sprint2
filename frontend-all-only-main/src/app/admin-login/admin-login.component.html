@@ -1,0 +1,30 @@
+<p>admin-login works!</p>
+
+
+<p>user-login works!</p>
+
+<p>login works!</p>
+
+<h1>Login Form</h1>
+
+<div class="container">
+<form  #loginForm="ngForm" (ngSubmit)="adminLogin()">
+    <div class="form-group">
+      <label for="uname">UserName:</label>
+      <input type="text" class="form-control" name="uname"  [(ngModel)]="uname" required #name="ngModel" >
+      <br><span *ngIf="name.invalid && name.touched" style="color : red">Please Enter a valid input</span><br>
+      
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password</label>
+      <input type="password" class="form-control" name="pwd" [(ngModel)]="pwd" #pass="ngModel" required minlength="2">
+      <br><span *ngIf="pass.invalid && pass.touched" style="color : red">Please Enter a valid input</span><br>
+    </div>
+  
+    <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+  </form>
+</div>
+
+
+
+
